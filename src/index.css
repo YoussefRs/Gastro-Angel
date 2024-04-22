@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffff;
+  min-height: 100vh;
+  overflow-x: hidden !important;
+}
+
+.row, .col {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Width */
+::-webkit-scrollbar {
+  width: 5px; /* Change width as needed */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Change track color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Change handle color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change handle color on hover */
+}

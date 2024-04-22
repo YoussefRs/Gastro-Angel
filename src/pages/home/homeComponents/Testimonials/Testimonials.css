@@ -1,0 +1,200 @@
+.testimonials-container {
+  height: auto;
+  width: 100vw;
+  background-color: #111111;
+}
+
+.slider-container {
+  padding: 5rem 0;
+
+  & h1 {
+    position: relative;
+    color: #fff;
+    margin-bottom: 3rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      border: 1px solid #daa05d;
+      z-index: 1;
+      width: 110px;
+      height: 110px;
+      margin-right: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: 0.5%;
+      z-index: 1;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      margin-right: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}
+
+.slick-slide {
+  padding: 5rem 0;
+}
+.slick-track {
+    display: flex !important;
+    gap: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8%;
+    background-image: url("https://res.cloudinary.com/muhammederdem/image/upload/v1537638518/Ba%C5%9Fl%C4%B1ks%C4%B1z-1.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 8%;
+    border: 1px solid #daa05d;
+    z-index: 1;
+    width: 110px;
+    height: 110px;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+    .wrapper {
+      height: auto;
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+  } */
+
+.profile-card {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  box-shadow: 10px 50px 50px -10px rgba(0, 0, 0, 0.6);
+  background: #141516;
+  max-width: 700px;
+  position: relative;
+}
+
+/* .profile-card__img {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    box-shadow: 0px 5px 50px 0px #6c44fc, 0px 0px 0px 7px rgba(107, 74, 255, 0.5);
+  }
+  @media screen and (max-width: 576px) {
+    .profile-card__img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  .profile-card__img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  } */
+.profile-card__cnt {
+  /* margin-top: -35px; */
+  text-align: left;
+  padding: 5rem 5% 5% 5%;
+  transition: all 0.3s;
+  max-height: 400px;
+  overflow: auto;
+}
+.profile-card__name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: "Copperplate", sans-serif;
+}
+.profile-card__txt {
+  font-size: 14px;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+  /* font-family: "Microsoft YaHei"; */
+}
+.profile-card__txt strong {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .profile-card-form {
+    max-width: 90%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .profile-card-form {
+    padding: 20px;
+  }
+}
+.profile-card-form__bottom {
+  justify-content: space-between;
+  display: flex;
+}
+@media screen and (max-width: 576px) {
+  .profile-card-form__bottom {
+    flex-wrap: wrap;
+  }
+}
+.profile-card textarea {
+  width: 100%;
+  resize: none;
+  height: 210px;
+  margin-bottom: 20px;
+  border: 2px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #324e63;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  outline: none;
+  transition: all 0.3s;
+}
+.profile-card textarea:focus {
+  outline: none;
+  border-color: #8a979e;
+}
