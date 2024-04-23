@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import "./Hero.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
+  const {t} = useTranslation();
+  const {desc, desc2, word, word2} = t("hero")
   useEffect(() => {
     AOS.init({
       once: false,
@@ -11,13 +14,13 @@ function Hero() {
     });
   }, []);
   return (
-    <section className="hero">
+    <section className='hero' id='hero'>
       <div className="hero_section d-flex">
         <div className="container-md px-md-0 px-4 d-flex align-items-center justify-content-center flex-column">
           <div className="text-content">
-            <h5 data-aos={"slide-right"}>Welcome to gastro Angel</h5>
+            <h5 data-aos={"slide-right"}>{desc}</h5>
             <h1 data-aos={"slide-right"} data-aos-delay="400" className="mt-2">
-              try the <span>BEST</span> <br />
+            {desc2} <span>{word}</span> <br />
             </h1>
 
             <div
@@ -31,7 +34,7 @@ function Hero() {
             </div>
           </div>
           <div className="my-3 food_word">
-            <span style={{ color: "#DAA05D" }}>food</span>
+            <span style={{ color: "#DAA05D" }}>{word2}</span>
             <span>...</span>
           </div>
           <div className="container container-mobile d-sm-block d-none">
@@ -124,16 +127,9 @@ function Hero() {
                 <div className="book-dot-container">
                   <div className="booking-dot"></div>
                   <div className="book-inner-circle"></div>
-                  <p>BOOK !</p>
+                  <p>{t("button")}</p>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="book-outer-container d-sm-none d-block ">
-            <div className="book-dot-container">
-              <div className="booking-dot"></div>
-              <div className="book-inner-circle"></div>
-              <p>BOOK !</p>
             </div>
           </div>
         </div>

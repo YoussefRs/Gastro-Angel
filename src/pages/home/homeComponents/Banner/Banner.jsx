@@ -8,8 +8,11 @@ import wedIcon from "../../../../assets/banner/wedding-icon.png";
 import breakIcon from "../../../../assets/banner/breakfast-icon.png";
 import fooIcon from "../../../../assets/banner/foo-icon.png";
 import foodIcon from "../../../../assets/banner/food-icon.png";
+import { useTranslation } from "react-i18next";
 
 function Banner() {
+  const {t} = useTranslation();
+  const {b1, b2} = t("banner")
   useEffect(() => {
     AOS.init({
       once: false,
@@ -17,7 +20,7 @@ function Banner() {
     });
   }, []);
   return (
-    <div className="banner " id="banner">
+    <div className="banner" id="banner">
       <div className="row h-100 w-100">
         <div className="col-md-9 col-12 p-0">
           <div className="row row_height">
@@ -27,7 +30,7 @@ function Banner() {
             >
               <div className="container-md d-flex flex-column">
                 <div className="col-md-6 d-flex align-items-start justify-content-center flex-column">
-                  <h1 className="title ">WEDDING</h1>
+                  <h1 className="title ">{b1} </h1>
                   <p className="subtitle">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Recusandae sed reiciendis
@@ -36,7 +39,7 @@ function Banner() {
                     <div className="banner-dot-container">
                       <div className="banner-dot"></div>
                       <div className="banner-inner-circle"></div>
-                      <p>MORE</p>
+                      <p>{t("more")} </p>
                     </div>
                   </div>
                 </div>
@@ -48,7 +51,7 @@ function Banner() {
               data-aos={"flip-right"}
             >
               <div className="d-flex align-items-start justify-content-center flex-column px-3">
-                <h1 className="title text-black">BREAKFAST</h1>
+                <h1 className="title text-black">{b2}</h1>
                 <p className="subtitle text-black">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Recusandae sed
@@ -57,7 +60,7 @@ function Banner() {
                   <div className="banner-dot-container">
                     <div className="banner-dot"></div>
                     <div className="banner-inner-circle"></div>
-                    <p>MORE</p>
+                    <p>{t("more")} </p>
                   </div>
                 </div>
               </div>
@@ -80,7 +83,7 @@ function Banner() {
                     <div className="banner-dot-container">
                       <div className="banner-dot"></div>
                       <div className="banner-inner-circle"></div>
-                      <p>MORE</p>
+                      <p>{t("more")} </p>
                     </div>
                   </div>
                 </div>
@@ -101,7 +104,7 @@ function Banner() {
                   <div className="banner-dot-container">
                     <div className="banner-dot"></div>
                     <div className="banner-inner-circle"></div>
-                    <p>MORE</p>
+                    <p>{t("more")} </p>
                   </div>
                 </div>
               </div>
@@ -109,10 +112,7 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div
-          className="col-md-3 col-12 bg-food py-5 bg_banner"
-          data-aos={"zoom-in"}
-        >
+        <div className="col-md-3 col-12 bg-food py-5 bg_banner" data-aos={"zoom-in"}>
           <div className="container d-flex flex-column">
             <div className="d-flex align-items-center justify-content-center flex-column">
               <h1 className="title ">
@@ -124,7 +124,7 @@ function Banner() {
                 <div className="banner-dot-container">
                   <div className="banner-dot"></div>
                   <div className="banner-inner-circle"></div>
-                  <p>MORE</p>
+                  <p>{t("more")} </p>
                 </div>
               </div>
             </div>

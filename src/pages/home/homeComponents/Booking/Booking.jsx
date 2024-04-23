@@ -5,8 +5,12 @@ import leftWing from "../../../../assets/booking/wing-left-large.png";
 import rightWing from "../../../../assets/booking/wing-right-large.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function Booking() {
+  
+  const {t} = useTranslation();
+  const {title} = t("friends")
   useEffect(() => {
     AOS.init({
       once: false,
@@ -24,7 +28,7 @@ function Booking() {
         </div>
         <div className="booking-box">
           <div className="booking-content">
-            <h1 className="title">FRIENDS & FAMILY</h1>
+            <h1 className="title">{title}</h1>
             <img src={aboutLogo} alt="" data-aos={"slide-up"} />
             <p className="subtitle text-center mt-4">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
@@ -37,7 +41,7 @@ function Booking() {
             <div className="about-dot-container">
               <div className="about-dot"></div>
               <div className="about-inner-circle"></div>
-              <p>BOOK</p>
+              <p>{t("button")} </p>
             </div>
           </div>
         </div>

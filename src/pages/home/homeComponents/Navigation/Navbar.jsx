@@ -3,8 +3,13 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import logo from "../../../../assets/home/logo.png";
 import { Offcanvas } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 function Navbar() {
+  const {t} = useTranslation();
+  const {item1,item2,item3,item4,item5,item6} = t("navbar")
+
   const [scrolled, setScrolled] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(false);
 
@@ -26,7 +31,7 @@ function Navbar() {
   }, []);
 
   const [hideLangMenu, setHideLangMenu] = useState(true);
-  const [selectedLang, setSelectedLang] = useState("En");
+  const [selectedLang, setSelectedLang] = useState("De");
 
   const [show, setShow] = useState(false);
 
@@ -43,6 +48,10 @@ function Navbar() {
         behavior: "smooth",
       });
     }
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -84,7 +93,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Home</span>
+              <span>{item1} </span>
               <svg
                 width="31"
                 height="19"
@@ -153,7 +162,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>About</span>
+              <span>{item2}</span>
               <svg
                 width="31"
                 height="19"
@@ -222,7 +231,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Catering</span>
+              <span>{item3}</span>
               <svg
                 width="31"
                 height="19"
@@ -296,7 +305,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Live</span>
+              <span>{item4}</span>
               <svg
                 width="31"
                 height="19"
@@ -365,7 +374,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Guest</span>
+              <span>{item5}</span>
               <svg
                 width="31"
                 height="19"
@@ -434,7 +443,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Contact</span>
+              <span>{item6}</span>
               <svg
                 width="31"
                 height="19"
@@ -528,24 +537,17 @@ function Navbar() {
                   onClick={() => {
                     setSelectedLang("En");
                     setHideLangMenu(true);
+                    changeLanguage("En")
                   }}
                 >
                   En
-                </div>
-                <div
-                  className="item mb-1 pointer"
-                  onClick={() => {
-                    setSelectedLang("Fr");
-                    setHideLangMenu(true);
-                  }}
-                >
-                  Fr
                 </div>
                 <div
                   className="item pointer"
                   onClick={() => {
                     setSelectedLang("De");
                     setHideLangMenu(true);
+                    changeLanguage("De")
                   }}
                 >
                   De
@@ -663,57 +665,132 @@ function Navbar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <div className="links">
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("hero");
-                  }}
-                >
-                  <span>Home</span>
+              <div className="d-flex flex-column justify-content-between h-100 ">
+                <div className="links">
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("hero");
+                    }}
+                  >
+                    <span>{item1}</span>
+                  </div>
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("about");
+                    }}
+                  >
+                    <span>{item2}</span>
+                  </div>
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("banner");
+                    }}
+                  >
+                    <span>{item3}</span>
+                  </div>
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("roto");
+                    }}
+                  >
+                    <span>{item4}</span>
+                  </div>
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("booking");
+                    }}
+                  >
+                    <span>{item5}</span>
+                  </div>
+                  <div
+                    onClick={() => {
+                      handleClose();
+                      scrollToSection("footer");
+                    }}
+                  >
+                    <span>{item6}</span>
+                  </div>
                 </div>
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("about");
-                  }}
+                <a
+                  className={`lang_menu_toggler ${
+                    hideLangMenu ? "" : "border-bottom-0"
+                  }`}
                 >
-                  <span>About</span>
-                </div>
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("banner");
-                  }}
-                >
-                  <span>Catering</span>
-                </div>
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("roto");
-                  }}
-                >
-                  <span>Live</span>
-                </div>
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("booking");
-                  }}
-                >
-                  <span>Guest</span>
-                </div>
-                <div
-                  onClick={() => {
-                    handleClose();
-                    scrollToSection("footer");
-                  }}
-                >
-                  <span>Contact</span>
-                </div>
+                  <div className="lang_menu_toggler_box">
+                    <div className="icon">
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g clipPath="url(#clip0_108_346)">
+                          <path
+                            d="M18.9154 8.10692L19.099 8.23869H19.2703V7.90905L19.8102 7.85671L20.323 8.23869H21.166L21.2252 8.18451C21.1407 7.90032 21.0457 7.62118 20.9392 7.34755L20.3891 7.35674L20.1132 7.05372L20.06 6.56661L19.7772 6.72087L19.6256 7.31633L19.2175 6.88201L19.201 6.47157L18.8071 6.13229L18.662 5.98767H18.2052L18.3489 6.3949L18.8989 6.70158L18.9944 6.80305L18.875 6.86273L18.8805 7.18549L18.6124 7.29751L18.3838 7.24747L18.2405 7.045L18.6129 7.06474L18.7134 6.9293L17.8893 6.37332L17.8259 6.13642L17.4912 6.43943L17.152 6.36965L16.6355 7.04133L16.5335 7.3044L16.203 7.33424L15.714 7.33745L15.4216 7.20064L15.3353 6.61986L15.4404 6.34302L15.9381 6.23421L16.4807 6.34302L16.5473 6.04276L16.3168 5.98813L16.3953 5.52029L16.9417 5.4349L17.3237 4.89544L17.718 4.82933L18.0739 4.88213H18.2052L18.1326 4.37527L17.7001 4.54973L17.5477 4.17097L17.2966 4.13608L17.2493 3.87668L17.4541 3.65355L17.9412 3.46256L18.0665 3.23851C16.2048 1.59857 13.7646 0.600006 11.0945 0.600006C8.77732 0.600006 6.63374 1.35203 4.89049 2.62239L5.42306 2.61826L5.66042 2.74956L6.1076 2.84597L6.14249 3.02181L6.85365 3.04798L6.75724 2.81981L6.1255 2.8019L6.27425 2.66187L6.22237 2.49476H5.65124L6.27425 2.02968H6.8711L7.15161 2.41625L7.61715 2.44242L7.89767 2.17016L8.1084 2.2753L7.72183 2.65269C7.72183 2.65269 7.18696 2.66233 7.21313 2.66233C7.2393 2.66233 7.25721 3.03054 7.25721 3.03054L7.90593 3.01263L7.97618 2.83771L8.42335 2.81108L8.47615 2.54801L8.21308 2.50348L8.30077 2.26658L8.50232 2.20552L9.2043 2.24041L8.81727 2.59163L8.87971 2.86342L9.28326 2.92494L9.25709 2.43369L9.64321 2.23168L10.3277 2.15272L11.319 2.59163V2.96902L11.6348 3.04798L11.4764 3.34641H11.0288L10.8961 3.68844L9.8746 3.44741L10.6785 3.01906L10.3723 2.75874L9.67902 2.84643L9.61841 2.90933L9.61612 2.90841L9.60556 2.92311L9.40585 3.13062L9.07575 3.15771L9.10192 3.32207L9.21715 3.36982L9.21256 3.42399L8.94398 3.4621L8.92424 3.61774L8.6676 3.63105L8.62123 3.32161L8.16074 3.46164L7.21956 4.01257L7.32516 4.40052L7.58823 4.57223L8.11437 4.64477V5.24299L8.3577 5.20397L8.58174 4.73659L9.1414 4.55937V3.84179L9.45268 3.60672L10.2052 3.7844L10.1524 4.25866H10.3544L10.9076 3.98686L10.9342 4.60942L11.3369 4.85504L11.3199 5.22417L10.9342 5.35547L10.9604 5.4776L11.4255 5.68925L11.4158 5.94359L11.2813 5.95507C11.2809 5.95094 11.2799 5.94818 11.2799 5.94818L10.6932 5.76729L10.6684 5.57906H10.6679L10.8396 5.46107V5.28936L10.6551 5.24299L10.6092 5.40138L10.2855 5.45143L10.2534 5.44087V5.45694L10.1413 5.47392L10.05 5.28936L9.94438 5.24299H9.71391L9.60923 5.3293V5.52029L9.80619 5.58595L10.0009 5.61349L9.95724 5.63278L9.77956 5.82973L9.70151 5.73148L9.52981 5.68603L9.06197 6.12586L9.12303 6.1759L8.43253 6.55834L7.78289 7.23415L7.73836 7.53487L7.08734 7.96276L6.76458 8.28735L6.80039 8.93653L6.35276 8.7281L6.35597 8.34841L5.11041 8.34887L4.46536 8.6753L4.1853 9.1918L4.0742 9.60133L4.25554 9.99846L4.76378 10.0604L5.57135 9.52052L5.64206 9.78819L5.39552 10.2537L6.01026 10.3589L6.07178 11.3083L6.91425 11.4515L7.44958 10.8327L8.09922 10.9649L8.3274 11.2821L8.95041 11.2454L8.96785 11.0613L9.31035 11.2275L9.69646 11.8326L10.3631 11.8418L10.6092 12.2724L10.6441 12.7986L11.3814 13.0791L12.3116 13.0887L12.5838 13.5354L12.9961 13.6677L12.9171 14.0373L12.4654 14.6111L12.3336 15.8824L11.9254 16.2047L11.3203 16.1868L11.1188 16.5376L11.2685 17.1969L10.6096 18.0389L10.3994 18.4254L9.77176 18.7266L9.35902 18.7895L9.34203 18.9644L9.63173 19.0475L9.59684 19.2362L9.33744 19.486L9.49491 19.6848L9.80711 19.6935L9.78966 19.9341L9.70656 20.1714L9.67993 20.3643L10.1418 20.7531L10.0803 20.9551L9.45176 20.9432L8.82645 20.3978L8.33933 19.5415L8.40728 18.7151L8.03862 18.2234L8.18783 17.3901L7.96883 17.3291V15.5211C7.96883 15.5211 7.35454 15.0556 7.31919 15.0556C7.28384 15.0556 6.99414 14.9766 6.99414 14.9766L6.93262 14.635L6.13422 13.6342L6.21319 13.2747L6.23936 12.6865L6.79213 12.3L6.71316 11.6416L5.90605 11.581L5.27431 10.8611L4.82668 10.7372L4.53744 10.6839L4.57233 10.4208L4.20366 10.3685V10.5177L3.28177 10.2877L2.91081 9.72024L3.06186 9.44523L2.47833 8.59358L2.37824 7.97057H2.14134L2.21985 8.57567L2.62341 9.19869L2.57933 9.44477L2.23729 9.39197L1.81629 8.67438V7.83926L1.37738 7.62853V7.02755C0.83563 8.29745 0.534912 9.69407 0.534912 11.16C0.534912 16.9829 5.27201 21.72 11.0949 21.72C14.3959 21.72 17.3471 20.1967 19.285 17.8167H18.9365V17.1147L18.5334 16.572V15.7277L18.2258 15.421L18.1987 15.0698L18.5899 14.3237L17.8493 13.0157L17.9361 12.1283L17.2695 12.0594L17.0239 11.8138H16.5758L16.3481 12.0241H15.5579L15.5313 12.0943H15.0919L14.0837 10.9451L14.092 10.0499L14.2586 9.98882L14.3206 9.64632H14.0837L13.9869 9.28684L15.1535 8.44483V7.84798L15.7246 7.53074L15.956 7.55369H16.4256L16.7934 7.35628L17.9784 7.264V7.86956L18.9154 8.10692ZM15.9532 4.34176L16.0496 4.193L16.3967 4.12276L16.4835 4.54422L16.6681 4.84219L16.7906 4.98313L17.0142 5.07037L16.8035 5.32104L16.3953 5.36006H16.0887L16.1231 4.99599L16.3784 4.94319L16.3568 4.77194L16.119 4.62273L15.9528 4.50887L15.9532 4.34176ZM15.3835 5.00012L15.5942 4.66222L15.8784 4.5961L16.0804 4.68379L16.062 4.91197L15.6277 5.21912H15.3825V5.00012H15.3835ZM9.64596 6.29894L9.42605 6.31731L9.43798 6.16443L9.53623 6.04184L9.66846 6.1456L9.64596 6.29894ZM10.4168 6.02899L10.2667 6.04184L10.2364 6.18692L10.1207 6.259L9.9352 6.27461C9.92877 6.231 9.9251 6.19794 9.9251 6.19794H9.85302V6.04184H10.1556L10.218 5.88069L10.3383 5.8784L10.4756 5.90686L10.4168 6.02899Z"
+                            fill="#B2B2B2"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_108_346">
+                            <rect
+                              width="21.12"
+                              height="21.12"
+                              fill="white"
+                              transform="translate(0.320068 0.600006)"
+                            />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                    <span
+                      onClick={() => {
+                        setHideLangMenu(!hideLangMenu);
+                      }}
+                      className="pointer"
+                    >
+                      {selectedLang}{" "}
+                      <svg
+                        width="13"
+                        height="13"
+                        viewBox="0 0 13 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M2.88498 5.11633L6.03003 8.78653C6.08073 8.84566 6.14361 8.89312 6.21437 8.92566C6.28513 8.9582 6.3621 8.97505 6.43998 8.97505C6.51787 8.97505 6.59483 8.9582 6.66559 8.92566C6.73635 8.89312 6.79924 8.84566 6.84993 8.78653L9.99498 5.11633C10.2951 4.76601 10.0463 4.22488 9.58503 4.22488L3.29403 4.22488C2.83278 4.22488 2.58393 4.76601 2.88498 5.11633Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+                  <div className={`lang_menu_sm ${hideLangMenu ? "hide" : ""}`}>
+                    <div
+                      className="item mb-1 pointer"
+                      onClick={() => {
+                        setSelectedLang("En");
+                        setHideLangMenu(true);
+                      }}
+                    >
+                      En
+                    </div>
+                    <div
+                      className="item pointer"
+                      onClick={() => {
+                        setSelectedLang("De");
+                        setHideLangMenu(true);
+                      }}
+                    >
+                      De
+                    </div>
+                  </div>
+                </a>
               </div>
-              
             </Offcanvas.Body>
           </Offcanvas>
         </nav>

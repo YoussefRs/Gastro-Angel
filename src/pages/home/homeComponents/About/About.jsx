@@ -6,8 +6,11 @@ import ma9la from "../../../../assets/about/ma9la.png";
 import aboutLogo from "../../../../assets/about/about-logo.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 function About() {
+  const {t} = useTranslation();
+  const {title, sub, desc, desc2, btn} = t("about")
   useEffect(() => {
     AOS.init({
       once: false,
@@ -15,7 +18,7 @@ function About() {
     });
   }, []);
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className=" row about-ctr">
         {/* <div className="col-1 d-xl-block d-none bg-about">
           <span>
@@ -26,18 +29,18 @@ function About() {
           <img src={broch} alt="" data-aos={"zoom-out"} data-aos-delay="800" />
         </div> */}
         <div className="col-4 ps-0 fork_block_md d-sm-flex d-none">
-          <div className="text"><span>ABOUT US</span></div>
+          <div className="text"><span>{title} </span></div>
           <div className="img" data-aos={"zoom-out"} data-aos-delay="800">
             <img src={brochSM} alt="" className="img-fluid" />
           </div>
         </div>
         <div className="col-sm-4 col-12 bg-content">
           <div className="text-content-about">
-            <h1 data-aos={"slide-up"}>ABOUT US</h1>
+            <h1 data-aos={"slide-up"}>{title}</h1>
             <img src={aboutLogo} alt="" data-aos={"slide-up"} />
-            <h5 data-aos={"slide-up"}>Welcome to gastro Angel</h5>
-            <h6 data-aos={"slide-up"}>Best Quality</h6>
-            <h2 data-aos={"slide-up"}>Foods</h2>
+            <h5 data-aos={"slide-up"}>{sub}</h5>
+            <h6 data-aos={"slide-up"}>{desc}</h6>
+            <h2 data-aos={"slide-up"}>{desc2}</h2>
             <p data-aos={"slide-up"}>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Blanditiis ipsam eveniet officiis ut repudiandae quaerat
@@ -51,7 +54,7 @@ function About() {
                 <div className="about-dot-container">
                   <div className="about-dot"></div>
                   <div className="about-inner-circle"></div>
-                  <p>MORE</p>
+                  <p>{btn}</p>
                 </div>
               </div>
             </div>

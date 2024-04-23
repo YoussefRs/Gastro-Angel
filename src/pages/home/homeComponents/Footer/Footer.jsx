@@ -1,22 +1,25 @@
 import React from "react";
 import "./Footer.css";
 import logo from "../../../../assets/home/logo.png";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const {t} = useTranslation();
+  const {title, in1, in2, in3} = t("footer")
   return (
     <div className="footer-container" id="footer">
       <div class="contact-box">
         <div class="left">
-          <h2>BOOK A TABLE</h2>
-          <input type="text" class="field" placeholder="Your Name" />
-          <input type="text" class="field" placeholder="Your Email" />
-          <input type="text" class="field" placeholder="Phone" />
+          <h2>{title}</h2>
+          <input type="text" class="field" placeholder={in1} />
+          <input type="text" class="field" placeholder={in2} />
+          <input type="text" class="field" placeholder={in3} />
           <input type="date" class="field" placeholder="date" />
           <div className="contact-outer-container">
             <div className="contact-dot-container">
               <div className="contacting-dot"></div>
               <div className="contact-inner-circle"></div>
-              <p>BOOK !</p>
+              <p>{t("button")} </p>
             </div>
           </div>
         </div>

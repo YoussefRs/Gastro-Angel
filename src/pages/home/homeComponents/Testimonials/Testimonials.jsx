@@ -3,28 +3,32 @@ import "./Testimonials.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useTranslation } from "react-i18next";
 
 
 function Testimonials() {
+  const {t} = useTranslation();
+  const {title} = t("testimonials")
+
   const testimonials = [
     {
-      name: "Si Youssef",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
+      name: "Youssef",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Si Youssef",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
+      name: "Youssef",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Si Youssef",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
+      name: "Youssef",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Si Youssef",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
+      name: "Youssef",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Si Youssef",
+      name: "Youssef",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
   ];
@@ -33,12 +37,12 @@ function Testimonials() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1400,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -47,9 +51,18 @@ function Testimonials() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 2,
           initialSlide: 2,
         },
@@ -67,7 +80,7 @@ function Testimonials() {
     <div className="testimonials-container">
       <div className="container px-5">
         <div className="slider-container">
-          <h1>TESTIMONY</h1>
+          <h1>{title}</h1>
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (
               <div key={index}>

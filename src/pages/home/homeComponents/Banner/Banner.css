@@ -39,11 +39,21 @@
 .bg-wedding {
   height: 100%;
   width: 100%;
-  @media (min-width: 768px) {
-    background-image: url(../../../../assets/banner/wedding.png);
+  &:first-of-type {
+    @media (min-width: 768px) {
+      background-image: url(../../../../assets/banner/wedding.png);
+    }
+    @media (max-width: 768px) {
+      background-image: url(../../../../assets/banner/wedding-sm.png);
+    }
   }
-  @media (max-width: 768px) {
-    background-image: url(../../../../assets/banner/wedding-sm.png);
+  &:last-of-type {
+    @media (min-width: 768px) {
+      background-image: url(../../../../assets/banner/business.png);
+    }
+    @media (max-width: 768px) {
+      background-image: url(../../../../assets/banner/business-sm.png);
+    }
   }
   background-position: left;
   background-repeat: no-repeat;
@@ -167,5 +177,16 @@
   }
   @media (min-width: 768px) and (max-width: 992px) {
     font-size: clamp(10px, 0.8vw, 12px);
+  }
+}
+
+.bg_banner {
+  position: relative;
+
+  & .banner_icon {
+    position: absolute;
+    z-index: -1;
+    top: 5%;
+    left: 5%;
   }
 }
