@@ -91,7 +91,7 @@ function Banner() {
               <img src={fooIcon} alt="" className="img-fluid banner_icon" />
             </div>
             <div
-              className="col-12 col-md-8 bg-wedding px-2 py-5 bg_banner order-0 order-md-1"
+              className="col-12 col-md-8 bg-wedding bg_banner order-0 order-md-1"
               data-aos={"flip-down"}
             >
               <div className="col-md-6 d-flex align-items-start justify-content-center flex-column px-3">
@@ -112,9 +112,9 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-12 bg-food py-5 bg_banner" data-aos={"zoom-in"}>
+        <div className="col-md-3 col-12 bg-food bg_banner" data-aos={"zoom-in"}>
           <div className="container d-flex flex-column">
-            <div className="d-flex align-items-center justify-content-center flex-column">
+            <div className="d-flex align-items-start justify-content-center flex-column">
               <h1 className="title ">
                 FINGER
                 <br />

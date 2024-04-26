@@ -150,6 +150,7 @@ input::placeholder {
     color: #fff;
     margin: 0 !important;
     font-family: "Copperplate", sans-serif;
+    z-index: 2;
   }
   & p:hover {
     transform: scale(1.2);
@@ -164,7 +165,7 @@ input::placeholder {
   border-radius: 50%;
   transform: translate(-13%, -10%);
   background-color: rgba(28, 28, 28, 1);
-  z-index: -1;
+  z-index: 1;
 }
 
 .contacting-dot {

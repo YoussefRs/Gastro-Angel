@@ -62,6 +62,7 @@
   align-items: center;
 }
 .bg-food {
+  padding: 6rem 2rem !important;
   /* height: 100%; */
   width: 100%;
   @media (min-width: 768px) {

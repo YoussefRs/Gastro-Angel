@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./About.css";
-import broch from "../../../../assets/about/broch.png";
 import brochSM from "../../../../assets/about/brochSM.png";
 import ma9la from "../../../../assets/about/ma9la.png";
 import aboutLogo from "../../../../assets/about/about-logo.png";
@@ -30,7 +29,7 @@ function About() {
         </div> */}
         <div className="col-4 ps-0 fork_block_md d-sm-flex d-none">
           <div className="text"><span>{title} </span></div>
-          <div className="img" data-aos={"zoom-out"} data-aos-delay="800">
+          <div className="img" >
             <img src={brochSM} alt="" className="img-fluid" />
           </div>
         </div>
@@ -63,8 +62,6 @@ function About() {
         <div className="col-sm-4 col-12 bg-ma9la">
           <div
             className="ma9la-dot-outer-container"
-            data-aos={"zoom-out"}
-            data-aos-delay="800"
           >
             <div className="ma9la-dot-container">
               <img src={ma9la} />

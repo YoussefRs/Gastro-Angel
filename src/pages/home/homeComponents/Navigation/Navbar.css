@@ -122,6 +122,7 @@
 
 .lang_menu_toggler {
   position: relative;
+  text-decoration: none;
   @media (min-width: 992px) {
     padding: 0.25rem 1rem;
   }
@@ -131,7 +132,7 @@
 }
 
 .lang_menu_toggler.bordered {
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
 }
 
 .lang_menu_toggler .icon {
@@ -140,19 +141,20 @@
 
 .lang_menu_toggler .lang_menu_toggler_box {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   height: auto;
+  gap: 5px;
 }
 
 .lang_menu_toggler .lang_menu {
   position: absolute;
-  left: 0;
+  left: -1%;
   top: 100%;
   max-height: 300px;
-  width: 100%;
-  border: 1px solid #fff;
+  width: 102%;
+  /* border: 1px solid #fff; */
   border-top: none;
   text-align: center;
   overflow: hidden;
@@ -171,11 +173,15 @@
   top: 100%;
   max-height: 300px;
   width: 100%;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   border-top: none;
   text-align: center;
   overflow: hidden;
   transition: max-height 1s ease-in-out;
+
+  & .item {
+    margin-left: 0.5rem;
+  }
 }
 
 .lang_menu_toggler .lang_menu_sm.hide {
@@ -186,13 +192,17 @@
 
 .lang_menu_toggler .lang_menu .item {
   color: #fff;
+  margin-left: 0.5rem;
 }
 
 .lang_menu_toggler .lang_menu .item:hover {
   opacity: 0.8;
   text-decoration: underline;
 }
-
+.pointer {
+  color: #fff;
+  text-decoration: none !important;
+}
 .pointer:hover {
   cursor: pointer;
 }

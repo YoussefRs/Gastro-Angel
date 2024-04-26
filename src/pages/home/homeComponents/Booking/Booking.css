@@ -48,6 +48,7 @@
   align-items: center;
   justify-content: flex-end;
   margin-right: 0 !important;
+  margin-left: 0 !important;
 
   @media (max-width: 1200px) {
     justify-content: center;
@@ -69,13 +70,13 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-  animation: float 2s ease-in-out infinite;
+  /* animation: float 2s ease-in-out infinite; */
 
   @media (min-width: 1920px) {
     width: 45%;
   }
   @media (min-width: 1400px) and (max-width: 1920px) {
-    width: 40%;
+    width: 45%;
   }
   @media (min-width: 1200px) and (max-width: 1400px) {
     width: 45%;
@@ -138,23 +139,23 @@
 
 .booking-box-left-wing,
 .booking-box-right-wing {
-  animation: float2 2s ease-in-out infinite;
+  /* animation: float2 2s ease-in-out infinite; */
   position: absolute;
   top: 25%;
   @media (min-width: 1400px) {
     &:first-of-type {
-      left: -5%;
+      left: 20%;
     }
     &:last-of-type {
-      right: -5%;
+      right: -35%;
     }
   }
   @media (min-width: 1200px) and (max-width: 1400px) {
     &:first-of-type {
-      left: -5%;
+      left: 23%;
     }
     &:last-of-type {
-      right: -5%;
+      right: -32%;
     }
 
     & img {
@@ -163,10 +164,10 @@
   }
   @media (min-width: 992px) and (max-width: 1200px) {
     &:first-of-type {
-      left: -12%;
+      left: 12%;
     }
     &:last-of-type {
-      right: -12%;
+      right: -38%;
     }
 
     & img {
@@ -175,10 +176,10 @@
   }
   @media (min-width: 768px) and (max-width: 992px) {
     &:first-of-type {
-      left: -20%;
+      left: -4%;
     }
     &:last-of-type {
-      right: -20%;
+      right: -43%;
     }
 
     & img {

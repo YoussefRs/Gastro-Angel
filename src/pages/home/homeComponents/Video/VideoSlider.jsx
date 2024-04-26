@@ -6,26 +6,26 @@ import "aos/dist/aos.css";
 const slides = [
   {
     imageUrl: "https://wallpapercave.com/wp/wp10322965.jpg",
-    title: "Highlands",
-    location: "Scotland",
+    title: "Live Cooking",
+    location: "Video 1",
   },
   {
     imageUrl:
       "https://www.lux-review.com/wp-content/uploads/2020/08/Lobster.jpg",
-    title: "Sahara",
-    location: "Marrakech",
+    title: "Live Cooking",
+    location: "Video 2",
   },
   {
     imageUrl:
       "https://mavieenloireatlantique.fr/wp-content/uploads/2022/02/nantes-restaurant-luni-23.jpg",
-    title: "Dolomites",
-    location: "Italy",
+    title: "Live Cooking",
+    location: "Video 3",
   },
   {
     imageUrl:
       "https://www.tradegroup.com/wp-content/uploads/2023/07/image-1.jpeg",
-    title: "Maldives",
-    location: "Indian Ocean",
+    title: "Live Cooking",
+    location: "Video 4",
   },
 ];
 

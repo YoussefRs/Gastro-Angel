@@ -20,7 +20,7 @@ function Booking() {
   return (
     <div className="booking" id="booking">
       <div
-        className="container-md px-md-0 px-4 justify-content-center booking-inner-box"
+        className="container-md px-md-0 px-4 justify-content-end booking-inner-box"
         data-aos={"slide-up"}
       >
         <div className="booking-box-left-wing">
