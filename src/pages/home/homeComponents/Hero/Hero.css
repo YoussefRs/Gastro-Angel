@@ -38,6 +38,7 @@
       text-transform: uppercase;
       letter-spacing: 10px;
       font-weight: 700;
+      font-family: "Copperplate", sans-serif;
     }
 
     & span:last-of-type {

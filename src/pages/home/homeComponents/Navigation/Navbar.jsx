@@ -665,7 +665,7 @@ function Navbar() {
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
-              <div className="d-flex flex-column justify-content-around h-100 ">
+              <div className="d-flex flex-column  h-100 ">
                 <div className="links">
                   <div
                     onClick={() => {

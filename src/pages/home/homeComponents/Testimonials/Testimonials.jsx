@@ -37,7 +37,7 @@ function Testimonials() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
@@ -78,7 +78,7 @@ function Testimonials() {
   };
   return (
     <div className="testimonials-container">
-      <div className="container px-5">
+      <div className="px-5">
         <div className="slider-container">
           <h1>{title}</h1>
           <Slider {...settings}>
