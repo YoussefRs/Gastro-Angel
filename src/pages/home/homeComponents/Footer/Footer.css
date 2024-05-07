@@ -171,14 +171,14 @@ input::placeholder {
 
 .contacting-dot {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 10px;
   height: 10px;
   background-color: #fff;
   border-radius: 50%;
-  animation: circle2 5s linear infinite;
+  /* animation: circle2 5s linear infinite; */
 }
 @keyframes circle2 {
   0% {

@@ -250,12 +250,12 @@ h1, h2, h3, h4, h5, h6 {
   
   .invitation-dot {
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 10px;
     height: 10px;
     background-color: rgba(218, 160, 93, 1);;
     border-radius: 50%;
-    animation: circle5 5s linear infinite;
+    /* animation: circle5 5s linear infinite; */
   }

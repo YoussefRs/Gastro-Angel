@@ -20,7 +20,7 @@
   & a:hover .display-svg {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-    animation: float 2s ease-in-out infinite;
+    /* animation: float 2s ease-in-out infinite; */
   }
   & nav a span {
     /* margin: 0 5em; */

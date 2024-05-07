@@ -117,14 +117,14 @@
 
 .dot {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) ;
   width: 10px;
   height: 10px;
   background-color: #fff;
   border-radius: 50%;
-  animation: circle 5s linear infinite;
+  /* animation: circle 5s linear infinite; */
 }
 .book-outer-container {
   position: absolute;
@@ -175,16 +175,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) translateX(60px);
   width: 10px;
   height: 10px;
   background-color: #fff;
   border-radius: 50%;
-  animation: circle2 5s linear infinite;
+  /* animation: circle2 5s linear infinite; */
 }
 @keyframes circle2 {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(60px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(60px);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg) translateX(60px)
@@ -193,7 +193,7 @@
 }
 @keyframes circle {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg)  rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg) translateX(80px)
@@ -255,5 +255,5 @@
 }
 
 .flying-wing {
-  animation: float 2s ease-in-out infinite;
+  /* animation: float 2s ease-in-out infinite; */
 }

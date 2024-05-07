@@ -12,23 +12,23 @@ function Testimonials() {
 
   const testimonials = [
     {
-      name: "Youssef",
+      name: "Jamie McLauren",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Youssef",
+      name: "Jamie McLauren",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Youssef",
+      name: "Jamie McLauren",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Youssef",
+      name: "Jamie McLauren",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nia tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
     {
-      name: "Youssef",
+      name: "Jamie McLauren",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, aliquam deserunt. Dolore minima ex asperiores, nisi a tempora laboriosam quidem suscipit fuga, explicabo, placeat molestiae pariatur sequi fugit soluta! Exercitationem!",
     },
   ];
